@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <title>Cadastro de novos alunos</title>
+
+    <link rel="stylesheet"  type="text/css" href="styles.css" />
+
+    <script src="script.js" defer></script>
+</head>
+<!-- action="http://localhost:8000" method="POST" -->
+
+<body>
+    <form onsubmit="enviarCadastro()" >
+        <h1>Dados de cadastro</h1>
+
+        <label for="nome">
+            Nome
+        </label>
+        <input id="nome" type="text" /> <!-- required  -->
+
+        <label for="email">
+            E-mail
+        </label>
+        <input id="email" type="email" placeholder="exemplo@exemplo.com" /> <!-- required -->
+
+        <label for="idade">
+            Idade
+        </label>
+        <input id="idade" type="number" min="0" />
+
+        <label for="genero">
+            Gênero
+        </label>
+        <select name="genero" id="genero" > <!-- required -->
+            <option value="" selected>
+                Por favor, selecione uma opção
+            </option>
+            <option value="masculino">
+                masculino
+            </option>
+
+            <option value="feminino">
+                feminino
+            </option>
+            <option value="binario">
+                binário
+            </option>
+
+            <option value="nao binario">
+                não binário
+            </option>
+
+            <option value="transexual">
+                transexual
+            </option>
+
+            <option value="queer">
+                queer
+            </option>
+
+            <option value="nao informado">
+                prefiro não informar
+            </option>
+        </select>
+
+        <label for="telefone">
+            Telefone
+        </label>
+        <input id="telefone" type="tel" minlength="11" maxlength="11" placeholder="10987654321" />
+
+        <p>Estudante?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="sim" name="estudante" value="sim" />
+            <label for="sim">
+                Sim
+            </label>
+
+            <input type="radio" id="nao" name="estudante" value="não" />
+            <label for="nao">
+                Não
+            </label>
+        </div>
+
+        <button id="enviarCadastro" type="submit" >
+            Cadastrar
+        </button>
+    </form>
+</body>
+
+</html>
